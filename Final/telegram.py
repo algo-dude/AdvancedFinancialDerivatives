@@ -5,7 +5,6 @@
 
 import logging
 import telebot
-from threading import Thread
 from config import TG_TOKEN, TG_CHAT_ID, TG_INSTANCE_NAME
 logger = logging.getLogger('VXX Flipper')
 
@@ -22,24 +21,9 @@ class TG_bot:
         # self.stats = False
 
 
-    def generate_bot(self):
-        interval = 5
-        timeout = 60
-        self.thx = Thread(target=self.bot.infinity_polling, args=(interval, timeout))
-
-    def poll_data(self):
-        logger.info("Polling TG data")
-        try:
-            if not self.thx.is_alive():
-                self.thx.start()
-        except Exception as ex:
-            print(ex)
-            logger.error("TG pool data error {}".format(ex))
-
-
     def sendTelegramMessage(self, message, instance_name=TG_INSTANCE_NAME):
         try:
-            message_instanced = "VXX Flipper *{}*\n{}".format(instance_name, message)
+            message_instanced = "*{}*\n{}".format(instance_name, message)
             self.bot.send_message(TG_CHAT_ID, message_instanced, parse_mode='Markdown')
         except Exception as ex:
             logger.error("TG Sending error {}".format(ex))
