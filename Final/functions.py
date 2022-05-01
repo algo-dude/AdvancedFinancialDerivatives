@@ -59,5 +59,5 @@ def my_plot_function(df, color='Virdis', title=''):
             width=600,
             height=600,
             # reduce border size
-            margin=dict(l=20, r=20, b=40, t=40))
+            margin=dict(l=40, r=40, b=40, t=40))
     plot.show()
