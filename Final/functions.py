@@ -10,6 +10,7 @@ def import_data(ticker, start_date, end_date, interval):
     data = yf.download(ticker, start=start_date, end=end_date, interval=interval)
     return data
 
+# not used
 def check_contango(x, y):
     '''
     x: int
@@ -19,6 +20,7 @@ def check_contango(x, y):
     '''
     return x < y
 
+# not used
 def apply_contango(df1, df2):
     '''
     Apply contango to df1.
@@ -56,8 +58,8 @@ def my_plot_function(df, color='Virdis', title=''):
             yaxis_title = 'TTM',
             zaxis_title = 'IV'),
             # size
-            width=600,
-            height=600,
+            width=700,
+            height=500,
             # reduce border size
             margin=dict(l=40, r=40, b=40, t=40))
     plot.show()
