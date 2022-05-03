@@ -8,7 +8,8 @@
 > Assignments, proofs, and final project under Dr. Stephen Clark at UNC Charlotte, MS Mathematical Finance program.
 
 ## Final Project:  
-An investigation into the VXX and why you should SAVOR the data.  [Link](https://github.com/algo-dude/AdvancedFinancialDerivatives/tree/master/Final)
+An investigation into the VXX and why you should SAVOR the data.  [Link](https://github.com/algo-dude/AdvancedFinancialDerivatives/tree/master/Final)  
+
 **S**plit  
 **A**djusted  
 **V**olatile  
